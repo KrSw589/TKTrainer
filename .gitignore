@@ -1,0 +1,15 @@
+# Files exported alongside the ready-to-publish site.
+/deploy/
+/uploads/
+/Trener Landing v2.dc.html
+/.thumbnail
+
+# Duplicate directories created during consolidation.
+/assets/assets/
+/_ds/_ds/
+/.playwright-cli/
+
+# Design tool metadata, not needed by the published site.
+/_ds/**/readme.md
+/_ds/**/_adherence.oxlintrc.json
+/_ds/**/_ds_manifest.json
