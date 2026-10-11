@@ -22,8 +22,9 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 @media(min-width:481px){.nav-cta-short{display:none}}
 .featured-story{display:grid;grid-template-columns:minmax(0,1fr) 240px;width:100%;max-width:760px;min-height:250px;margin:8px 0 0;text-align:left;background:var(--color-surface);border:1px solid var(--color-neutral-300);border-radius:14px;overflow:hidden}
 .featured-story-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:clamp(24px,3vw,36px)}
-.featured-story img{display:block;width:100%;height:100%;min-height:250px;object-fit:cover;object-position:center 70%}
-@media(max-width:600px){.featured-story{grid-template-columns:1fr}.featured-story img{height:210px;min-height:0;object-position:center 65%}}
+.featured-story-photo{position:relative;min-height:226px;margin:12px;border-radius:10px;overflow:hidden}
+.featured-story-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 70%}
+@media(max-width:600px){.featured-story{grid-template-columns:1fr}.featured-story-photo{height:210px;min-height:0;margin-top:0}.featured-story-photo img{object-position:center 65%}}
 .martyna-result{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,340px);gap:clamp(24px,5vw,72px);align-items:center;max-width:1000px;margin:0 auto}
 .martyna-result img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;border-radius:12px;box-shadow:0 0 0 1px var(--color-neutral-300),0 12px 32px color-mix(in srgb,var(--color-neutral-900) 10%,transparent)}
 @media(max-width:700px){.martyna-result{grid-template-columns:1fr}.martyna-result a{max-width:360px;width:100%;margin:0 auto}}
@@ -58,7 +59,7 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-neutral-800)">Lista diagnoz była długa. Dziś Magda żyje bez bólu, znów chodzi po górach, tańczy i uprawia sport.</p>
 <a href="#efekty" style="font-size:15px;font-weight:500">Zobacz inne historie</a>
 </figcaption>
-<img src="assets/magda-gory.png" alt="Dwie turystki na szczycie Babiej Góry" loading="lazy">
+<div class="featured-story-photo"><img src="assets/magda-gory.png" alt="Dwie turystki na szczycie Babiej Góry" loading="lazy"></div>
 </figure>
 </div>
 </section>
