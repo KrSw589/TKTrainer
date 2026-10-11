@@ -24,6 +24,9 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 .featured-story-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:clamp(24px,3vw,36px)}
 .featured-story img{display:block;width:100%;height:100%;min-height:250px;object-fit:cover;object-position:center 70%}
 @media(max-width:600px){.featured-story{grid-template-columns:1fr}.featured-story img{height:210px;min-height:0;object-position:center 65%}}
+.martyna-result{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,340px);gap:clamp(24px,5vw,72px);align-items:center;max-width:1000px;margin:0 auto}
+.martyna-result img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;border-radius:12px;box-shadow:0 0 0 1px var(--color-neutral-300),0 12px 32px color-mix(in srgb,var(--color-neutral-900) 10%,transparent)}
+@media(max-width:700px){.martyna-result{grid-template-columns:1fr}.martyna-result a{max-width:360px;width:100%;margin:0 auto}}
 </style>
 </helmet>
 <div style="--color-accent:{{ accent }};font-family:var(--font-body);color:var(--color-text);background:radial-gradient(1100px 620px at 88% -120px,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 62%),var(--color-bg);min-height:100vh;overflow-x:clip">
@@ -232,6 +235,18 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 </div>
 </section>
 
+<section style="padding:clamp(40px,8vw,96px) clamp(20px,5vw,72px)">
+<div class="martyna-result">
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:16px">
+<span style="font-size:14px;color:var(--color-accent);font-weight:500">Przykład efektu</span>
+<h2 style="margin:0;font-size:clamp(30px,3.4vw,44px);line-height:1.15;letter-spacing:-0.015em;color:var(--color-neutral-900)">Metamorfoza Martyny</h2>
+<p style="margin:0;font-size:18px;line-height:1.6;color:var(--color-neutral-800);max-width:44ch">Prawie 20 kg mniej i kolano, które w końcu przestało boleć.</p>
+<p style="margin:0;font-size:15px;color:var(--color-neutral-700)">Kliknij zdjęcie, aby zobaczyć porównanie i pomiary w pełnym rozmiarze.</p>
+</div>
+<a href="assets/martyna-przed-po.png" target="_blank" rel="noopener" aria-label="Otwórz metamorfozę Martyny w pełnym rozmiarze"><img src="assets/martyna-przed-po.png" alt="Porównanie przed i po współpracy Martyny wraz z tabelą pomiarów" loading="lazy"></a>
+</div>
+</section>
+
 <section id="opinie" style="padding:clamp(40px,9vw,112px) 0;scroll-margin-top:60px">
 <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px">
 <div>
@@ -352,7 +367,6 @@ class Component extends DCLogic {
         { name: 'Magda', imgs: [['assets/magda-gory.png', 'center 60%']], text: 'Lista diagnoz dłuższa niż lista zakupów na święta. Dziś bez bólu. Wróciła do gór, tańca i sportu.' },
         { name: 'Monika', imgs: [['assets/trener-z-podopieczna.png', 'center 30%']], text: 'Była o krok od operacji przepukliny w odcinku szyjnym kręgosłupa. Udało nam się odratować sytuację.' },
         { name: 'Michalina', imgs: [['assets/michalina.png', 'center']], text: 'Przygotowaliśmy ją do operacji łąkotki, a potem zadbaliśmy o bardzo szybki powrót. Przy okazji sylwetka trochę się zmieniła :)' },
-        { name: 'Martyna', imgs: [['assets/martyna-przed-po.png', 'center 30%']], text: 'Prawie 20 kg mniej i kolano, które w końcu przestało boleć.' },
         { name: 'Wiktor i Julia', imgs: [['assets/wiktor-przed-po.png', 'center'], ['assets/julia-przed-po.png', 'center']], text: 'Skupiali się na zmianie sylwetki. Efekty mówią same za siebie.' }
       ].map(c => ({ name: c.name, text: c.text, cols: 'repeat(' + c.imgs.length + ', minmax(0,1fr))', imgs: c.imgs.map(([src, pos]) => ({ src, pos, alt: c.name })) })),
       reviews: Array.from({ length: 32 }, (_, i) => ({ src: `assets/opinie/opinia-${String(i + 1).padStart(2, '0')}.png`, alt: `Opinia podopiecznego ${i + 1}` })),
