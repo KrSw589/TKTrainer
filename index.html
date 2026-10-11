@@ -37,9 +37,9 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 .featured-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);width:100%;max-width:1100px;min-height:250px;margin:8px 0 0;text-align:left;background:var(--color-surface);border:1px solid var(--color-neutral-300);border-radius:14px;overflow:hidden}
 .featured-story-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:clamp(24px,3vw,36px)}
 .magda-messages{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:8px;padding:8px;background:#f5f2ed}
-.magda-message{display:block;min-width:0;background:#f5f2ed}
+.magda-message{display:block;min-width:0;background:#f5f2ed;cursor:zoom-in}
 .magda-message img{display:block;width:100%;height:auto;object-fit:contain}
-@media(max-width:600px){.featured-story{grid-template-columns:1fr}.magda-messages{grid-template-columns:1fr;align-items:start}.magda-message img{width:auto;max-width:100%;margin:0 auto}}
+@media(max-width:600px){.featured-story{grid-template-columns:1fr}.magda-messages{gap:6px;padding:6px}}
 </style>
 </helmet>
 <div style="--color-accent:{{ accent }};font-family:var(--font-body);color:var(--color-text);background:radial-gradient(1100px 620px at 88% -120px,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 62%),var(--color-bg);min-height:100vh;overflow-x:clip">
@@ -69,6 +69,7 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 <span style="font-size:14px;color:var(--color-accent);font-weight:500">Historia Magdy</span>
 <h2 style="margin:0;font-size:clamp(24px,2.8vw,32px);line-height:1.2;letter-spacing:-0.02em;color:var(--color-neutral-900)">Magda wróciła w góry</h2>
 <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-neutral-800)">Lista diagnoz była długa. Dziś Magda żyje bez bólu, znów chodzi po górach, tańczy i uprawia sport.</p>
+<span style="font-size:14px;color:var(--color-neutral-700)">Kliknij zrzut, aby powiększyć wiadomość.</span>
 </figcaption>
 <div class="magda-messages">
 <a class="magda-message" href="assets/opinie/opinia-03.png" target="_blank" rel="noopener" aria-label="Otwórz pierwszą część wiadomości Magdaleny w pełnym rozmiarze"><img src="assets/opinie/opinia-03.png" alt="Pierwsza część wiadomości Magdaleny na WhatsAppie o jej dolegliwościach przed współpracą" width="251" height="400" loading="lazy" decoding="async"></a>
