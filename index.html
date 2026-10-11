@@ -367,12 +367,12 @@ class Component extends DCLogic {
       prevQ: () => this.setState(x => ({ q: (x.q + quotes.length - 1) % quotes.length })),
       nextQ: () => this.setState(x => ({ q: (x.q + 1) % quotes.length })),
       cases: [
-        { name: 'Martyna', imgs: [['assets/martyna-przed-po.webp', 'center 35%']], text: 'Prawie 20 kg mniej i kolano, które w końcu przestało boleć.' },
         { name: 'Mirek', imgs: [['assets/mirek-przed-po.webp', 'center 70%']], text: 'Przyszedł z uszkodzoną panewką w biodrze i przepukliną kręgosłupa. Dziś bez bólu, za to z fajną sylwetką.' },
         { name: 'Magda', imgs: [['assets/magda-gory.webp', 'center 60%']], text: 'Lista diagnoz dłuższa niż lista zakupów na święta. Dziś bez bólu. Wróciła do gór, tańca i sportu.' },
         { name: 'Monika', imgs: [['assets/trener-z-podopieczna.webp', 'center 30%']], text: 'Była o krok od operacji przepukliny w odcinku szyjnym kręgosłupa. Udało nam się odratować sytuację.' },
         { name: 'Michalina', imgs: [['assets/michalina.png', 'center']], text: 'Przygotowaliśmy ją do operacji łąkotki, a potem zadbaliśmy o bardzo szybki powrót. Przy okazji sylwetka trochę się zmieniła :)' },
-        { name: 'Wiktor i Julia', imgs: [['assets/wiktor-przed-po.png', 'center'], ['assets/julia-przed-po.png', 'center']], text: 'Skupiali się na zmianie sylwetki. Efekty mówią same za siebie.' }
+        { name: 'Wiktor i Julia', imgs: [['assets/wiktor-przed-po.png', 'center'], ['assets/julia-przed-po.png', 'center']], text: 'Skupiali się na zmianie sylwetki. Efekty mówią same za siebie.' },
+        { name: 'Martyna', imgs: [['assets/martyna-przed-po.webp', 'center 35%']], text: 'Prawie 20 kg mniej i kolano, które w końcu przestało boleć.' }
       ].map(c => ({ name: c.name, text: c.text, cols: 'repeat(' + c.imgs.length + ', minmax(0,1fr))', imgs: c.imgs.map(([src, pos]) => ({ src, pos, alt: c.name })) })),
       reviews: Array.from({ length: 32 }, (_, i) => ({ src: i === 6 ? 'assets/opinie/opinia-07.webp' : `assets/opinie/opinia-${String(i + 1).padStart(2, '0')}.png`, alt: `Opinia podopiecznego ${i + 1}` })),
       scrollRef: this.scroller,
