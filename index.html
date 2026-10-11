@@ -20,6 +20,10 @@ html{scroll-behavior:smooth}
 a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 @media(max-width:480px){.nav{padding:8px 12px!important;gap:6px!important}.nav-brand{gap:6px!important}.nav-brand img{width:36px!important;height:36px!important}.nav-name{font-size:14px!important}.nav-subtitle{display:none}.nav-cta{font-size:12px!important;padding:8px 9px!important;min-height:38px!important}}
 @media(max-width:360px){.nav-name{font-size:13px!important}.nav-cta{font-size:11px!important;padding:7px 6px!important}}
+.featured-story{display:grid;grid-template-columns:minmax(0,1fr) 240px;width:100%;max-width:760px;min-height:250px;margin:8px 0 0;text-align:left;background:var(--color-surface);border:1px solid var(--color-neutral-300);border-radius:14px;overflow:hidden}
+.featured-story-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:clamp(24px,3vw,36px)}
+.featured-story img{display:block;width:100%;height:100%;min-height:250px;object-fit:cover;object-position:center 70%}
+@media(max-width:600px){.featured-story{grid-template-columns:1fr}.featured-story img{height:210px;min-height:0;object-position:center 65%}}
 </style>
 </helmet>
 <div style="--color-accent:{{ accent }};font-family:var(--font-body);color:var(--color-text);background:radial-gradient(1100px 620px at 88% -120px,color-mix(in srgb,var(--color-accent) 12%,transparent),transparent 62%),var(--color-bg);min-height:100vh;overflow-x:clip">
@@ -44,6 +48,15 @@ a{color:oklch(0.47 0.12 262)}a:hover{color:oklch(0.38 0.11 262)}
 <p style="margin:0;font-size:clamp(17px,1.6vw,19px);line-height:1.6;max-width:52ch;color:var(--color-neutral-800)">Dla osób, które chcą znowu w pełni korzystać z życia bez bólu i kontuzji i jednocześnie cieszyć się fajną sylwetką. Jasny i skuteczny plan działania.</p>
 <a href="#kontakt" class="btn btn-primary" style="white-space:nowrap;font-size:16px;padding:14px 24px;min-height:48px;background:{{ ctaBg }};color:{{ ctaFg }}">Umów konsultację<svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg></a>
 <p style="margin:0;font-size:15px;color:var(--color-neutral-700);max-width:44ch">Ponad <strong style="color:var(--color-neutral-900);font-weight:500">50 zadowolonych podopiecznych</strong>, którzy tak jak Ty od dawna zmagali się z bólem.</p>
+<figure class="featured-story">
+<figcaption class="featured-story-copy">
+<span style="font-size:14px;color:var(--color-accent);font-weight:500">Historia Magdy</span>
+<h2 style="margin:0;font-size:clamp(24px,2.8vw,32px);line-height:1.2;letter-spacing:-0.02em;color:var(--color-neutral-900)">Magda wróciła w góry</h2>
+<p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-neutral-800)">Lista diagnoz była długa. Dziś Magda żyje bez bólu, znów chodzi po górach, tańczy i uprawia sport.</p>
+<a href="#efekty" style="font-size:15px;font-weight:500">Zobacz inne historie</a>
+</figcaption>
+<img src="assets/magda-gory.png" alt="Dwie turystki na szczycie Babiej Góry" loading="lazy">
+</figure>
 </div>
 </section>
 </div>
