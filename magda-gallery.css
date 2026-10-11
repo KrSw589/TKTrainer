@@ -1,0 +1,79 @@
+.magda-gallery-dialog {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #11131b;
+  color: #fff;
+}
+
+.magda-gallery-dialog::backdrop {
+  background: rgb(12 14 22 / 90%);
+}
+
+.magda-gallery-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 48px 76px 64px;
+}
+
+.magda-gallery-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  touch-action: pan-y;
+}
+
+.magda-gallery-button {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 60%);
+  color: #fff;
+  font: 32px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.magda-gallery-button:hover,
+.magda-gallery-button:focus-visible {
+  background: rgb(255 255 255 / 22%);
+}
+
+.magda-gallery-close { top: 16px; right: 16px; font-size: 26px; }
+.magda-gallery-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+.magda-gallery-next { right: 16px; top: 50%; transform: translateY(-50%); }
+.magda-gallery-status {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #fff;
+  font: 15px/1.4 Arial, sans-serif;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .magda-gallery-panel { padding: 60px 12px 76px; }
+  .magda-gallery-prev,
+  .magda-gallery-next { display: none; }
+  .magda-gallery-status::after { content: " · Przesuń palcem"; }
+}
