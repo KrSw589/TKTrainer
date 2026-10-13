@@ -1,6 +1,6 @@
 # Audyt SEO i wydajności — TKTrainer
 
-Stan: 11 października 2026. Adres publikacji sprawdzony podczas audytu: `https://krsw589.github.io/TKTrainer/`. Zmiany w tym repozytorium wymagają opublikowania, zanim będą widoczne pod tym adresem.
+Stan: 11 października 2026. Adres publikacji sprawdzony podczas audytu: `https://krsw589.github.io/TKTrainer/`. Od 13 października 2026 strona jest publikowana pod `https://tktrener.pl/`.
 
 ## Najważniejsze ustalenia
 
@@ -29,13 +29,13 @@ Automatyczny wynik SEO 100/100 obejmuje tylko podstawowe kontrole techniczne. Ni
 
 ## Google Search Console — co dodać
 
-1. Po opublikowaniu zmian dodaj usługę typu **Prefiks adresu URL**: `https://krsw589.github.io/TKTrainer/`. Ten typ usługi może zawierać ścieżkę. Nie wybieraj weryfikacji domeny `github.io`, ponieważ nie jest to Twoja domena.
-2. Zweryfikuj własność metodą znacznika HTML: pobierz od Google wartość `google-site-verification` i dodaj w `<head>` pliku `index.html` znacznik `<meta name="google-site-verification" content="TOKEN_Z_SEARCH_CONSOLE">`, zastępując przykład prawdziwym tokenem. Alternatywnie użyj pliku weryfikacyjnego, jeśli Search Console zaoferuje tę metodę. Nie publikuj przykładowego ani pustego tokenu.
-3. W raporcie **Mapy witryn** zgłoś `https://krsw589.github.io/TKTrainer/sitemap.xml`.
+1. Po przepięciu domeny dodaj usługę typu **Domena**: `tktrener.pl`. Obejmuje ona `https://`, `http://`, `www` i wszystkie ścieżki.
+2. Zweryfikuj własność rekordem DNS: skopiuj z Search Console wartość `google-site-verification=…` i dodaj ją w Cloudflare jako rekord `TXT` dla nazwy `@`. Weryfikacja zwykle przechodzi w ciągu kilku minut.
+3. W raporcie **Mapy witryn** zgłoś `https://tktrener.pl/sitemap.xml`.
 4. W **Sprawdzeniu adresu URL** przetestuj stronę główną, sprawdź wybraną przez Google stronę kanoniczną i poproś o indeksowanie po publikacji.
 5. Obserwuj **Indeksowanie stron**, **Skuteczność** (zapytania, kliknięcia, CTR i strony) oraz **Podstawowe wskaźniki internetowe**. Eksport tych danych pozwoli ustalić dalsze priorytety.
 
-Na GitHub Pages w projekcie pod ścieżką `/TKTrainer/` plik `/TKTrainer/robots.txt` nie jest głównym plikiem robots hosta. Brak takiego pliku nie blokuje indeksowania strony. Mapę zgłoś bezpośrednio w Search Console.
+Strona działa pod własną domeną, więc `robots.txt` w katalogu głównym repozytorium jest głównym plikiem robots hosta i wskazuje mapę witryny. Stary adres `https://krsw589.github.io/TKTrainer/` przekierowuje na `https://tktrener.pl/`.
 
 ## Informacje do uzupełnienia na stronie
 
